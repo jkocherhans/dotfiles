@@ -1,0 +1,11 @@
+autodetach on # Autodetach session on hangup instead of terminating screen completely
+startup_message off # Turn off the splash screen
+defscrollback 30000 # Scrollback buffer size
+termcapinfo xterm ti@:te@
+shell -${SHELL}
+vbell off
+
+altscreen on # clear screen after vim, etc.
+
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %d %LM - %c $STY"
+

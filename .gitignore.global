@@ -1,0 +1,8 @@
+*.pyc
+*.tmproj
+.DS_Store
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+*.swp
+
