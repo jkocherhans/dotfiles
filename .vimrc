@@ -5,8 +5,6 @@ syntax on
 
 " highlight searches and make the case insensetive if no caps are used
 set hls is ic scs
-" clear the current search highlighting in insert mode
-nmap <silent> <esc> :noh<CR>
 
 filetype plugin indent on
 set ruler
@@ -23,24 +21,28 @@ set tabstop=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set bg=dark
-set guifont=Andale\ Mono:h10
-set linespace=1                " Extra space between lines since Andale Mono has a short line height
-colorscheme vilight
-set number
+if has("gui_macvim")
+    set number
+    " clear the current search highlighting in insert mode
+    nmap <silent> <esc> :noh<CR>
+
+    set bg=dark
+    colorscheme vilight
+    set guifont=Andale\ Mono:h10
+    set linespace=1     " Extra space between lines
+    set go-=T           " hide the toolbar (MacVim)
+    set guioptions=eg   " turn off scrollbars
+    set lines=60
+    set columns=110
+    set cursorline
+    set gcr=n:blinkon0  " don't blink in normal mode
+endif
+
 
 set wildmode=longest,list
 set suffixes+=.pyc
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.beam
 
-set lines=60
-set columns=110
-
-set go-=T           " hide the toolbar (MacVim)
-set guioptions=eg   " turn off scrollbars
-set gcr=n:blinkon0  " don't blink in normal mode
-
-set cursorline
 
 set list
 set listchars=tab:‣\ ,eol:¬,trail:· " show tabs, trailing whitespace, and linebreaks similar to TextMate
@@ -57,37 +59,37 @@ let g:bufExplorerShowRelativePath=1
 " http://blog.golden-ratio.net/2008/08/19/using-tabs-in-vim/
 
 function! GuiTabLabel()
-        " add the tab number
-        let label = '['.tabpagenr()
+    " add the tab number
+    let label = '['.tabpagenr()
 
-        " modified since the last save?
-        let buflist = tabpagebuflist(v:lnum)
-        for bufnr in buflist
-                if getbufvar(bufnr, '&modified')
-                        let label .= '*'
-                        break
-                endif
-        endfor
-
-        " count number of open windows in the tab
-        let wincount = tabpagewinnr(v:lnum, '$')
-        if wincount > 1
-                let label .= ', '.wincount
+    " modified since the last save?
+    let buflist = tabpagebuflist(v:lnum)
+    for bufnr in buflist
+        if getbufvar(bufnr, '&modified')
+            let label .= '*'
+            break
         endif
-        let label .= '] '
+    endfor
 
-        " add the file name without path information
-        let n = bufname(buflist[tabpagewinnr(v:lnum) - 1])
-        let label .= fnamemodify(n, ':t')
+    " count number of open windows in the tab
+    let wincount = tabpagewinnr(v:lnum, '$')
+    if wincount > 1
+        let label .= ', '.wincount
+    endif
+    let label .= '] '
 
-        return label
+    " add the file name without path information
+    let n = bufname(buflist[tabpagewinnr(v:lnum) - 1])
+    let label .= fnamemodify(n, ':t')
+
+    return label
 endfunction
 
 set guitablabel=%{GuiTabLabel()}
 
-
-
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" python
+"
 let g:python_highlight_all=1
 
 command! Pyflakes :call Pyflakes()
