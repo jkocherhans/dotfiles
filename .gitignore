@@ -14,5 +14,7 @@
 !.vimrc
 !.vim/*
 !.vim/colors/*
+!.vim/doc/*
+!.vim/plugin/*
 !.vim/syntax/*
 
