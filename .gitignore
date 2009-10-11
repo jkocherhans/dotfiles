@@ -15,6 +15,7 @@
 !.vim/*
 !.vim/colors/*
 !.vim/doc/*
+!.vim/nerdtree_plugin/*
 !.vim/plugin/*
 !.vim/syntax/*
 
