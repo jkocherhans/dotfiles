@@ -11,3 +11,8 @@
 
 !.screenrc
 
+!.vimrc
+!.vim/*
+!.vim/colors/*
+!.vim/syntax/*
+
