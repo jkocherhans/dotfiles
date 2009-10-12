@@ -104,3 +104,11 @@ if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
 
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
+if [ -f `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]; then
+  . `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+fi
+
