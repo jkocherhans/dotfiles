@@ -104,6 +104,10 @@ if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
 
+if [ -f /usr/local/bin/virtualenvwrapper_bashrc ]; then
+  . /usr/local/bin/virtualenvwrapper_bashrc
+fi
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
