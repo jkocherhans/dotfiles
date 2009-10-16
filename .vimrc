@@ -3,7 +3,7 @@ set nocompatible
 set bs=indent,eol,start
 syntax on
 
-" highlight searches and make the case insensetive if no caps are used
+" highlight searches and make them case insensetive if no caps are used
 set hls is ic scs
 
 filetype plugin indent on
@@ -18,6 +18,12 @@ set fileformats=unix,dos,mac " support all three, in this order
 " Use 4 spaces for indentation and replace tabs with spaces in a smart way
 set shiftwidth=4 softtabstop=4 expandtab
 set tabstop=4
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" bindings
+
+nnoremap <Leader>nt :NERDTreeToggle<Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -38,11 +44,9 @@ if has("gui_macvim")
     set gcr=n:blinkon0  " don't blink in normal mode
 endif
 
-
 set wildmode=longest,list
 set suffixes+=.pyc
 set wildignore=*.o,*.obj,*.bak,*.exe,*.pyc,*.beam
-
 
 set list
 set listchars=tab:‣\ ,eol:¬,trail:· " show tabs, trailing whitespace, and linebreaks similar to TextMate
