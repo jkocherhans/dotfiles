@@ -99,3 +99,6 @@ function! Pyflakes()
     cw
 endfunction
 
+" Save as sudo
+cmap w!! %!sudo tee > /dev/null %
+
