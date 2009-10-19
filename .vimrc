@@ -24,6 +24,7 @@ set tabstop=4
 " bindings
 
 nnoremap <Leader>nt :NERDTreeToggle<Enter>
+nnoremap <Leader>tl :TlistToggle<Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
