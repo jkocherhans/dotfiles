@@ -19,6 +19,8 @@ set fileformats=unix,dos,mac " support all three, in this order
 set shiftwidth=4 softtabstop=4 expandtab
 set tabstop=4
 
+set formatoptions-=t
+set formatoptions-=c
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " bindings
