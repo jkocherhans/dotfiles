@@ -1,6 +1,3 @@
-[core]
-    ; git doesn't seem to recognize ~ or $HOME, so use an absolute path
-    excludesfile = /Users/jkocherhans/.gitignore.global
 [user]
 	name = Joseph Kocherhans
 	email = jkocherhans@mac.com
