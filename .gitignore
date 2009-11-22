@@ -11,15 +11,3 @@
 
 !.screenrc
 
-!.vimrc
-!.vim/*
-!.vim/after/plugin/*
-!.vim/autoload/*
-!.vim/colors/*
-!.vim/doc/*
-!.vim/ftplugin/*
-!.vim/nerdtree_plugin/*
-!.vim/plugin/*
-!.vim/snippets/*
-!.vim/syntax/*
-
