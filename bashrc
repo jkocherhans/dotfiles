@@ -108,6 +108,10 @@ if [ -f /usr/local/bin/virtualenvwrapper_bashrc ]; then
   . /usr/local/bin/virtualenvwrapper_bashrc
 fi
 
+if [ -f ~/Projects/django/trunk/extras/django_bash_completion ]; then
+  . ~/Projects/django/trunk/extras/django_bash_completion
+fi
+
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
