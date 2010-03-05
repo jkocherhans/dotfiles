@@ -1,9 +1,11 @@
 [user]
-	name = Joseph Kocherhans
-	email = joseph@jkocherhans.com
+    name = Joseph Kocherhans
+    email = joseph@jkocherhans.com
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	outgoing = svn dcommit --dry-run
+    st = status
+    ci = commit
+    co = checkout
+    outgoing = svn dcommit --dry-run
+[apply]
+    whitespace = fix
 
