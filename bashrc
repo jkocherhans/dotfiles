@@ -97,15 +97,10 @@ function set_prompt() {
 }
 export PROMPT_COMMAND=set_prompt
 
-
 # local ######################################################################
 
 if [ -f ~/.bash_local ]; then
     . ~/.bash_local
-fi
-
-if [ -f /usr/local/bin/virtualenvwrapper_bashrc ]; then
-  . /usr/local/bin/virtualenvwrapper_bashrc
 fi
 
 if [ -f ~/Projects/django/trunk/extras/django_bash_completion ]; then
@@ -119,4 +114,22 @@ fi
 if [ -f `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]; then
   . `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 fi
+
+
+# virtualenv/pip #############################################################
+
+export PIP_REQUIRE_VIRTUALENV=true
+export PIP_RESPECT_VIRTUALENV=true
+
+if [ -f /usr/local/bin/virtualenvwrapper_bashrc ]; then
+  . /usr/local/bin/virtualenvwrapper_bashrc
+fi
+
+_pip_completion()
+{
+    COMPREPLY=( $( COMP_WORDS="${COMP_WORDS[*]}" \
+                   COMP_CWORD=$COMP_CWORD \
+                   PIP_AUTO_COMPLETE=1 $1 ) )
+}
+complete -o default -F _pip_completion pip
 
