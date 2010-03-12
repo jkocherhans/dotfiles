@@ -1,3 +1,6 @@
 [ui]
 username = Joseph Kocherhans <joseph@jkocherhans.com>
 
+[extensions]
+hgext.mq =
+
