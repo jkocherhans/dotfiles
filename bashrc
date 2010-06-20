@@ -133,3 +133,8 @@ _pip_completion()
 }
 complete -o default -F _pip_completion pip
 
+
+# node.js ####################################################################
+
+export PATH=/usr/local/Cellar/node/`node --version `/bin:$PATH
+
