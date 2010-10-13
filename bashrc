@@ -140,3 +140,10 @@ _pip_completion()
 }
 complete -o default -F _pip_completion pip
 
+
+# pman #######################################################################
+
+pman () {
+    man -t "${1}" | open -f -a /Applications/Preview.app
+}
+
