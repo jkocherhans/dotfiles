@@ -128,8 +128,8 @@ fi
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_RESPECT_VIRTUALENV=true
 
-if [ -f /usr/local/bin/virtualenvwrapper_bashrc ]; then
-  . /usr/local/bin/virtualenvwrapper_bashrc
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  . /usr/local/bin/virtualenvwrapper.sh
 fi
 
 _pip_completion()
