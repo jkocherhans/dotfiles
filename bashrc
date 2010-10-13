@@ -147,3 +147,7 @@ pman () {
     man -t "${1}" | open -f -a /Applications/Preview.app
 }
 
+# node.js ####################################################################
+
+export PATH=/usr/local/Cellar/node/`node --version `/bin:$PATH
+
