@@ -92,8 +92,12 @@ function set_prompt() {
     # Dollar/pound sign
     end="${LC}\$${NIL} "
 
+    # Title for Terminal.app
+    # http://superuser.com/questions/52483/terminal-tips-and-tricks-for-mac-os-x/127447#127447
+    title="\[\033]0;${_venv}\007\]"
+
     # Feels kind of like cheating...but works so well!
-    export PS1="${userhost}:${path}${venv}${branch} ${end}"
+    export PS1="${title}${userhost}:${path}${venv}${branch} ${end}"
 }
 export PROMPT_COMMAND=set_prompt
 
