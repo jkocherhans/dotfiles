@@ -1,5 +1,8 @@
 export EDITOR=vim
 
+# Put /usr/local first on $PATH.
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 
 # history ####################################################################
 
