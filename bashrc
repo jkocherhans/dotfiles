@@ -155,5 +155,6 @@ pman () {
 
 # node.js ####################################################################
 
-export PATH=/usr/local/Cellar/node/`node --version `/bin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+export NODE_PATH=/usr/local/lib/node
 
