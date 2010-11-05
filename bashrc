@@ -126,7 +126,6 @@ fi
 
 # virtualenv/pip #############################################################
 
-export PIP_REQUIRE_VIRTUALENV=true
 export PIP_RESPECT_VIRTUALENV=true
 export PROJECT_HOME=$HOME/Projects
 
