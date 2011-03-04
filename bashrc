@@ -12,11 +12,6 @@ export HISTSIZE=10000
 shopt -s histappend
 
 
-# git ########################################################################
-
-source /usr/local/etc/git-completion.bash
-
-
 # ssh ########################################################################
 
 # Thanks to Tom Tobin for the ssh key laziness
