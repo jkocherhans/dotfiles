@@ -1,5 +1,5 @@
 [user]
-    name = Joseph Kocherhans
+	name = Joseph Kocherhans
     email = joseph@jkocherhans.com
 [alias]
     st = status
@@ -8,3 +8,5 @@
 [apply]
     whitespace = fix
 
+[core]
+	quotepath = false
