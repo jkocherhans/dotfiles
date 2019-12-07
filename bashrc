@@ -30,6 +30,8 @@ function pubkey_push () {
 eval "$(pyenv init -)"
 eval "$(register-python-argcomplete pipx)"
 
+eval "$(pipenv --completion)"
+
 # Recursively delete *.pyc in the given directory
 function pyclean () {
     if [ $1 ] ; then
