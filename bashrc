@@ -1,9 +1,9 @@
 export DOTFILES=$HOME/Projects/dotfiles
 export EDITOR=vim
 
-# Put /usr/local first on $PATH.
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+export PATH="$PATH:$HOME/.local/bin"
 
 # history ####################################################################
 
@@ -26,6 +26,9 @@ function pubkey_push () {
 
 
 # python #####################################################################
+
+eval "$(pyenv init -)"
+eval "$(register-python-argcomplete pipx)"
 
 # Recursively delete *.pyc in the given directory
 function pyclean () {
@@ -124,10 +127,6 @@ fi
 export PIP_RESPECT_VIRTUALENV=true
 export PROJECT_HOME=$HOME/Projects
 
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
-  . /usr/local/bin/virtualenvwrapper.sh
-fi
-
 _pip_completion()
 {
     COMPREPLY=( $( COMP_WORDS="${COMP_WORDS[*]}" \
@@ -151,4 +150,3 @@ pman () {
 
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node
-
