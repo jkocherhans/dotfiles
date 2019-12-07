@@ -1,0 +1,18 @@
+# This comes from installing mysql-client with brew
+
+# mysql-client is keg-only, which means it was not symlinked into /usr/local,
+# because it conflicts with mysql (which contains client libraries).
+# If you need to have mysql-client first in your PATH run:
+
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+
+# For compilers to find mysql-client you may need to set:
+
+export LDFLAGS="-L/usr/local/opt/mysql-client/lib"
+export CPPFLAGS="-I/usr/local/opt/mysql-client/include"
+
+
+# For pkg-config to find mysql-client you may need to set:
+
+export PKG_CONFIG_PATH="/usr/local/opt/mysql-client/lib/pkgconfig"
