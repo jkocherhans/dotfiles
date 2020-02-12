@@ -16,7 +16,7 @@ I use pyenv to install multiple versions of python and to witch between them. Ev
 
 I use pipx to install python command line tools globally. Things like awscli, pipenv, or poetry.
 
-### Install
+### Installing pipx
 
     python -m pip install --user pipx
     python -m pipx ensurepath
@@ -30,7 +30,7 @@ I use pipx to install python command line tools globally. Things like awscli, pi
 
 - [pipenv](https://pipenv.kennethreitz.org)
 - [poetry](https://poetry.eustace.io)
-- [pipenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
+- [pyenv-virtualenvwrapper](https://github.com/pyenv/pyenv-virtualenvwrapper)
 
 ## References
 

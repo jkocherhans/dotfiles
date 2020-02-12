@@ -32,6 +32,8 @@ eval "$(register-python-argcomplete pipx)"
 
 eval "$(pipenv --completion)"
 
+source "$DOTFILES/python/virtualenvwrapper"
+
 # Recursively delete *.pyc in the given directory
 function pyclean () {
     if [ $1 ] ; then
@@ -152,3 +154,5 @@ pman () {
 
 export PATH=/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/lib/node
+
+export PATH="/usr/local/opt/terraform@0.11/bin:$PATH"
