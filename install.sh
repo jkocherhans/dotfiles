@@ -10,6 +10,7 @@ ln -sf "$DOTFILES_HOME/zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES_HOME/inputrc" "$HOME/.inputrc"
 
 ln -sf "$DOTFILES_HOME/gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES_HOME/gitignore" "$HOME/.gitignore"
 
 ln -sf "$DOTFILES_HOME/screenrc" "$HOME/.screenrc"
 ln -sf "$DOTFILES_HOME/tmux.conf" "$HOME/.tmux.conf"

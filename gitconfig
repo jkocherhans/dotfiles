@@ -10,5 +10,6 @@
 
 [core]
 	quotepath = false
+	excludesfile = /Users/jkocherhans/.gitignore
 [credential]
 	helper = osxkeychain
