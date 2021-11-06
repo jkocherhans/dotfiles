@@ -13,3 +13,5 @@
 	excludesfile = /Users/jkocherhans/.gitignore
 [credential]
 	helper = osxkeychain
+[init]
+	defaultBranch = main
