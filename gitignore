@@ -4,5 +4,8 @@
 # pyenv
 .python-version
 
+# nvm
+.nvmrc
+
 # VS Code
 .vscode
