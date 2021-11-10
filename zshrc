@@ -1,3 +1,5 @@
+export DOTFILES=$HOME/Projects/dotfiles
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if type brew &>/dev/null; then
@@ -9,6 +11,8 @@ if type brew &>/dev/null; then
     autoload -Uz bashcompinit
     bashcompinit
 fi
+
+source $DOTFILES/completion/fabric.bash
 
 # Case insensitive completion
 setopt nocaseglob
