@@ -12,7 +12,7 @@ _fab_completion() {
 
     local cur="${COMP_WORDS[COMP_CWORD]}"
 
-    tasks=$(fab --shortlist)
+    tasks=$(fab --complete)
     COMPREPLY=( $(compgen -W "${tasks}" -- ${cur}) )
 }
 
