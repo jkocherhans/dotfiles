@@ -5,6 +5,9 @@ if type brew &>/dev/null; then
 
     autoload -Uz compinit
     compinit
+
+    autoload -Uz bashcompinit
+    bashcompinit
 fi
 
 # Case insensitive completion
